@@ -1,12 +1,13 @@
 import { NgModule } from "@angular/core";
-import { NgxsModule } from "@ngxs/store";
 import { BrowserModule } from "@angular/platform-browser";
+import { NgxsModule } from "@ngxs/store";
+import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
 
 import { AppComponent } from "./app.component";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NgxsModule.forRoot([])],
+  imports: [BrowserModule, NgxsModule.forRoot(), NgxsLoggerPluginModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })
